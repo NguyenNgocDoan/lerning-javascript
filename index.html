@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Function -->
+    <div >
+        <h2>JavaScript Function</h2>
+
+        <p id="demo-function-1"></p>
+
+        <p id="demo-function-2"></p>
+        
+        <script src="test.js"></script>
+    </div>
+    <!-- Event -->
+    <div >
+    <script src="test.js"></script>
+    <h2>JavaScript HTML Events 1</h2>
+    <button onclick="document.getElementById('demo1'),innerHTML = Date()">The time is:</button>
+    <p id="demo-event-1"></p>
+    
+    <h2>JavaScript HTML Events 2</h2>
+    <button onclick="this.innerHTML = Date()">The time is:</button>
+    
+    <h2>JavaScript HTML Events 3</h2>
+    <p>Click the button to display the date.</p>
+    <button onclick="displayDate()">The time is:</button>
+    
+    <p id="demo-event-3"></p>
+    </div>
+
+    <!-- 
+                STRING METHOD
+    String length: xuất ra chiều dài của chuỗi
+    String slice(): trích một string con trong string mẹ từ vị trí n tới vị trí m
+    String substring(): trích một string con trong string mẹ từ vị trí n tới vị trí m
+    String substr(): cắt một string con trong string mẹ từ vị trí n và kéo dài m phần tử
+    String replace():  tìm kiếm và thay thế một string con trong string mẹ
+    String replaceAll(): tìm kiếm và thay thế tất cả string con
+    String toUpperCase(): chuyển toàn bộ chuỗi chữ thường thành chữ viết Hoa.
+    String toLowerCase():  chuyển toàn bộ chuỗi thành chữ thường.
+    String concat(): được sử dụng để nối 2 hoặc nhiều string lại với nhau
+    String trim():  xóa khoảng trắng ở hai đầu của string
+    String trimStart()
+    String trimEnd()
+    String charAt(): trả về ký tự trong string tương ứng với vị trí truyền vào
+    String charCodeAt(): trả về mã Unicode của ký tự trong string tương ứng với vị trí truyền vào
+    String split(): tạo ra một mảng từ một chuỗi
+            JavaScript Search Methods
+    String indexOf(): lấy vị trí xuất hiện đầu tiên của string con trong string mẹ
+    String lastIndexOf(): Tương tự như indexOf(), nhưng trả về vị trí xuất hiện cuối cùng của string con trong string mẹ
+    String search(): tìm vị trí một string con trong string mẹ theo biểu thức chính quy
+    String match(): trích một string con trong string mẹ bằng “biểu thức chính quy“
+    String includes(): kiểm tra xem string con có nằm trong string mẹ hay không
+    String startsWith(): kiểm tra một string mẹ có được bắt đầu bằng string con truyền vào không
+    String endsWith(): kiểm tra string con có nằm trong string mẹ hay không
+
+-->
+
+<!-- 
+    Number Method
+toString() Trả về một số dưới dạng chuỗi
+
+toExponential() Trả về một số được viết theo ký hiệu hàm mũ
+
+toFixed() Trả về một số được viết bằng một số thập phân
+
+toPrecision() Trả về một số được viết với độ dài xác định
+
+ValueOf() Trả về một số dưới dạng một số 
+-->
+    <!-- ARRAY -->
+    <div>
+        <h2>JavaScript Arrays</h2>
+
+        <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+        
+        <p id="demo-array-1"></p>
+        
+        <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo-array-1").innerHTML = cars[0];
+        </script>
+
+
+        <p id="demo-array-2"></p>
+
+        <script>
+        const cars2 = ["Saab", "Volvo", "BMW"];
+        cars2[0] = "Opel";
+        document.getElementById("demo-array-2").innerHTML = cars2;
+        </script>
+    </div>
+
+    <!-- DATE -->
+    <h2>JavaScript new Date()</h2>
+
+    <p>JavaScript counts months from 0 to 11.</p>
+    <p>Specifying a day higher than max, will not result in an error but add the overflow to the next month:</p>
+    
+    <p id="demo-date"></p>
+    
+    <script>
+    const d = new Date(2018, 014, 35, 10, 33, 30, 0);
+    document.getElementById("demo-date").innerHTML = d;
+    </script>
+    
+    <!-- MATH -->
+    <div>
+    <h2>JavaScript Math Constants</h2>
+    <p id="demo-math"></p>
+    
+    <script src="test.js"></script>
+    <!-- 
+            Math method
+    Math.round(x) Trả về x được làm tròn thành số nguyên gần nhất
+
+    Math.ceil(x) Trả về x được làm tròn lên tới số nguyên gần nhất
+
+    Math.floor(x) Trả về x được làm tròn xuống số nguyên gần nhất
+
+    Math.trunc(x) Trả về phần nguyên của x (mới trong ES6)
+     -->
+    </div>
+
+    <!-- RANDOM -->
+    <div>
+        <h2>JavaScript Math.random()</h2>
+
+        <p>Every time you click the button, getRndInteger(min, max) returns a random number between 1 and 10 (both included):</p>
+        
+        <button onclick="document.getElementById('demo-random').innerHTML = getRndInteger(1,10)">Click Me</button>
+        
+        <p id="demo-random"></p>
+        
+        
+        <script src="test.js">
+            function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }</script>
+
+    </div>
+    
+    <!-- SET -->
+    <div>
+        <h2>JavaScript Sets</h2>
+        <p>Add values to a Set:</p>
+        
+        <p id="demo"></p>
+        
+        <script>
+        // Create a Set
+        const letters_1 = new Set();
+        
+        // Add Values to the Set
+        letters_1.add("a");
+        letters_1.add("b");
+        letters_1.add("c");
+        
+        // Display set.size
+        document.getElementById("demo").innerHTML = letters_1.size;
+        </script>
+    </div>
+
+
+    <!-- MAP -->
+    <div>
+        <h2>JavaScript Map Objects</h2>
+        <p>Using Map.set():</p>
+        
+        <p id="demo-map"></p>
+        
+        <script>
+        // Create a Map
+        const fruits = new Map([
+          ["apples", 500],
+          ["bananas", 300],
+          ["oranges", 200]
+        ]);
+        
+        fruits.set("apples", 200);
+        
+        document.getElementById("demo-map").innerHTML = fruits.get("apples");
+        </script>
+    </div>
+</body>
+</html>

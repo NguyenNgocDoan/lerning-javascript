@@ -1,0 +1,17 @@
+.function {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.array {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
